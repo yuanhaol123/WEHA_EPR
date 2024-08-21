@@ -2,6 +2,7 @@
 Integration of EPR with weighted ensemble Hamiltonian annealing
 
 These files are associated with the following publication:
+<img width="939" alt="Screenshot 2024-08-21 at 4 54 34 PM" src="https://github.com/user-attachments/assets/48cafa54-cdd8-4038-8a89-8cba1626d11a">
 
 
 
