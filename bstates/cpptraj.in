@@ -1,0 +1,7 @@
+parm ../common_files/GST.prmtop
+trajin 01/bstate.ncrst
+strip :WAT
+distance @7275 @7317 noimage out pcoord.dat
+energy  :1-444 out energy.dat 
+go
+quit
