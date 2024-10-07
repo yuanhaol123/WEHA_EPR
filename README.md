@@ -1,7 +1,9 @@
 # WEHA_EPR
-Integration of EPR with weighted ensemble Hamiltonian annealing
-
 These files are associated with the following publication:
+Boltzmann conformational ensembles of proteins: Integration of EPR with weighted ensemble Hamiltonian annealing.
+
+Workflow of integration of EPR with weighted ensemble Hamiltonian annealing
+
 <img width="945" alt="image" src="https://github.com/user-attachments/assets/415056ae-cc39-44b5-86fa-7dac929193df">
 
 
