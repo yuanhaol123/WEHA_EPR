@@ -1,0 +1,6 @@
+# Log started on 06/13/2024 [mm/dd/yyyy] at 10:50:42
+# Command line arguments: free.prmtop
+# Loaded topologies: free.prmtop
+hmassrepartition
+ outparm diala_hmass.parm7
+quit

@@ -1,0 +1,13 @@
+parm free.prmtop
+trajin parent.ncrst
+trajin seg.nc
+reference reference.pdb 
+#strip :WAT
+autoimage
+rms rms_align1 :5-104,151-196,227-326,373-418&!@H= reference
+rms rms_allign2 :5-104,151-196,227-326,373-418&!@H= reference nofit out core_rmsd.dat
+rms rms1 :209-219&!@H= reference nofit out Complete_rmsd_allignA91.dat
+rms rms2 :430-440&!@H= reference nofit out Complete_rmsd_allignA92.dat 
+rms rms3 :209-219&!@H= reference out a9_1_check.dat 
+#rms rms4: 430-440&!@H= reference out a9_2_check.dat
+go

@@ -1,0 +1,787 @@
++ cd /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
++ source env.sh
+++ conda activate westpa-2.0
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+++ module purge
++++ /ihome/crc/install/lmod/lmod/libexec/lmod bash purge
+++ eval 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/ihome/crc/modules/Core";' export 'MODULEPATH;' 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/ihome/crc/modules/Core";' export 'MODULEPATH;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MCxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17fSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsWyJ2ZXJzaW9uIl09Mix9";' export '_ModuleTable001_;' '_ModuleTable_Sz_="1";' export '_ModuleTable_Sz_;'
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/ihome/crc/modules/Core
++++ export MODULEPATH
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/ihome/crc/modules/Core
++++ export MODULEPATH
++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MCxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17fSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsWyJ2ZXJzaW9uIl09Mix9
++++ export _ModuleTable001_
++++ _ModuleTable_Sz_=1
++++ export _ModuleTable_Sz_
+++ '[' 0 = 0 ']'
++++ : -s sh
+++ eval
+++ module load gcc/8.2.0 openmpi/4.0.3 amber/22-beta
++++ /ihome/crc/install/lmod/lmod/libexec/lmod bash load gcc/8.2.0 openmpi/4.0.3 amber/22-beta
+Warning: When compiling code please add the following flags to nvcc:
+         -gencode arch=compute_35,code=[compute_35,sm_35] \
+         -gencode arch=compute_61,code=[compute_61,sm_61] 
+         -gencode arch=compute_70,code=[compute_70,sm_70] 
+++ eval 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/ihome/crc/modules/Core";' export 'MODULEPATH;' 'AMBERHOME="/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU";' export 'AMBERHOME;' 'CMAKE_PREFIX_PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0:/ihome/crc/install/cuda/11.6.1";' export 'CMAKE_PREFIX_PATH;' 'CPATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include";' export 'CPATH;' 'CPLUS_INCLUDE_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include";' export 'CPLUS_INCLUDE_PATH;' 'CUDAROOT="/ihome/crc/install/cuda/11.6.1";' export 'CUDAROOT;' 'CUDA_ROOT="/ihome/crc/install/cuda/11.6.1";' export 'CUDA_ROOT;' 'C_INCLUDE_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include";' export 'C_INCLUDE_PATH;' 'GCC_ROOT="/ihome/crc/install/gcc/8.2.0";' export 'GCC_ROOT;' 'INCLUDEPATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include";' export 'INCLUDEPATH;' 'INCLUDE_PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include";' export 'INCLUDE_PATH;' 'LD_LIBRARY_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64";' export 'LD_LIBRARY_PATH;' 'LD_RUN_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib64";' export 'LD_RUN_PATH;' 'LIBPATH="/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0";' export 'LIBPATH;' 'LIBRARY_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64";' export 'LIBRARY_PATH;' 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'LOADEDMODULES="cuda/11.6.1:gcc/8.2.0:openmpi/4.0.3:zlib/1.2.11:amber/22-beta";' export 'LOADEDMODULES;' 'MANPATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/share/man:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/share/man:/ihome/crc/install/gcc/8.2.0/share/man:/ihome/crc/install/cuda/11.6.1/doc/man:/ihome/crc/install/lmod/lmod/share/man::";' export 'MANPATH;' 'MODULEPATH="/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3:/ihome/crc/modules/Compiler/gcc/8.2.0:/ihome/crc/modules/Compiler/cuda/11.6.1:/ihome/crc/modules/Core";' export 'MODULEPATH;' 'MPI_ROOT="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0";' export 'MPI_ROOT;' 'OMPI_MCA_mpi_warn_on_fork="0";' export 'OMPI_MCA_mpi_warn_on_fork;' 'OPENMPI_ROOT="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0";' export 'OPENMPI_ROOT;' 'PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin";' export 'PATH;' 'PKG_CONFIG_PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib/pkgconfig";' export 'PKG_CONFIG_PATH;' 'ZLIB_HOME="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0";' export 'ZLIB_HOME;' '_LMFILES_="/ihome/crc/modules/Core/cuda/11.6.1.lua:/ihome/crc/modules/Core/gcc/8.2.0.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/openmpi/4.0.3.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/zlib/1.2.11.lua:/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3/amber/22-beta.lua";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09NSxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17YW1iZXI9e1siRk4iXT0iL2lob21lL2NyYy9tb2R1bGVzL01QSS9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy9hbWJlci8yMi1iZXRhLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImFtYmVyLzIyLWJldGEiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInNob3J0Il09ImFtYmVyIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sY3VkYT17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9jdWRhLzExLjYuMS5s";' export '_ModuleTable001_;' '_ModuleTable002_="dWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJjdWRhLzExLjYuMSIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iY3VkYSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGdjYz17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9nY2MvOC4yLjAubHVhIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0iZ2NjLzguMi4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzaG9ydCJdPSJnY2MiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxvcGVubXBpPXtbIkZOIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy5sdWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJvcGVubXBpLzQuMC4zIixbImxv";' export '_ModuleTable002_;' '_ModuleTable003_="YWRPcmRlciJdPTMscHJvcFQ9e30sWyJzaG9ydCJdPSJvcGVubXBpIixbInN0YXR1cyJdPSJhY3RpdmUiLH0semxpYj17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29tcGlsZXIvZ2NjLzguMi4wL3psaWIvMS4yLjExLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzaG9ydCJdPSJ6bGliIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvTVBJL2djYy84LjIuMC9vcGVubXBpLzQuMC4zIiwiL2lob21lL2NyYy9tb2R1bGVzL0NvbXBpbGVyL2djYy84LjIuMCIsIi9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9jdWRhLzExLjYuMSIsIi9paG9t";' export '_ModuleTable003_;' '_ModuleTable004_="ZS9jcmMvbW9kdWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db3JlIixbInZlcnNpb24iXT0yLH0=";' export '_ModuleTable004_;' '_ModuleTable_Sz_="4";' export '_ModuleTable_Sz_;' source '/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh;'
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/ihome/crc/modules/Core
++++ export MODULEPATH
++++ AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
++++ export AMBERHOME
++++ CMAKE_PREFIX_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0:/ihome/crc/install/cuda/11.6.1
++++ export CMAKE_PREFIX_PATH
++++ CPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
++++ export CPATH
++++ CPLUS_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
++++ export CPLUS_INCLUDE_PATH
++++ CUDAROOT=/ihome/crc/install/cuda/11.6.1
++++ export CUDAROOT
++++ CUDA_ROOT=/ihome/crc/install/cuda/11.6.1
++++ export CUDA_ROOT
++++ C_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
++++ export C_INCLUDE_PATH
++++ GCC_ROOT=/ihome/crc/install/gcc/8.2.0
++++ export GCC_ROOT
++++ INCLUDEPATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include
++++ export INCLUDEPATH
++++ INCLUDE_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
++++ export INCLUDE_PATH
++++ LD_LIBRARY_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
++++ export LD_LIBRARY_PATH
++++ LD_RUN_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib64
++++ export LD_RUN_PATH
++++ LIBPATH=/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0
++++ export LIBPATH
++++ LIBRARY_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
++++ export LIBRARY_PATH
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ LOADEDMODULES=cuda/11.6.1:gcc/8.2.0:openmpi/4.0.3:zlib/1.2.11:amber/22-beta
++++ export LOADEDMODULES
++++ MANPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/share/man:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/share/man:/ihome/crc/install/gcc/8.2.0/share/man:/ihome/crc/install/cuda/11.6.1/doc/man:/ihome/crc/install/lmod/lmod/share/man::
++++ export MANPATH
++++ MODULEPATH=/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3:/ihome/crc/modules/Compiler/gcc/8.2.0:/ihome/crc/modules/Compiler/cuda/11.6.1:/ihome/crc/modules/Core
++++ export MODULEPATH
++++ MPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
++++ export MPI_ROOT
++++ OMPI_MCA_mpi_warn_on_fork=0
++++ export OMPI_MCA_mpi_warn_on_fork
++++ OPENMPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
++++ export OPENMPI_ROOT
++++ PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
++++ export PATH
++++ PKG_CONFIG_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib/pkgconfig
++++ export PKG_CONFIG_PATH
++++ ZLIB_HOME=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0
++++ export ZLIB_HOME
++++ _LMFILES_=/ihome/crc/modules/Core/cuda/11.6.1.lua:/ihome/crc/modules/Core/gcc/8.2.0.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/openmpi/4.0.3.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/zlib/1.2.11.lua:/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3/amber/22-beta.lua
++++ export _LMFILES_
++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09NSxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17YW1iZXI9e1siRk4iXT0iL2lob21lL2NyYy9tb2R1bGVzL01QSS9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy9hbWJlci8yMi1iZXRhLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImFtYmVyLzIyLWJldGEiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInNob3J0Il09ImFtYmVyIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sY3VkYT17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9jdWRhLzExLjYuMS5s
++++ export _ModuleTable001_
++++ _ModuleTable002_=dWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJjdWRhLzExLjYuMSIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iY3VkYSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGdjYz17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9nY2MvOC4yLjAubHVhIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0iZ2NjLzguMi4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzaG9ydCJdPSJnY2MiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxvcGVubXBpPXtbIkZOIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy5sdWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJvcGVubXBpLzQuMC4zIixbImxv
++++ export _ModuleTable002_
++++ _ModuleTable003_=YWRPcmRlciJdPTMscHJvcFQ9e30sWyJzaG9ydCJdPSJvcGVubXBpIixbInN0YXR1cyJdPSJhY3RpdmUiLH0semxpYj17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29tcGlsZXIvZ2NjLzguMi4wL3psaWIvMS4yLjExLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzaG9ydCJdPSJ6bGliIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvTVBJL2djYy84LjIuMC9vcGVubXBpLzQuMC4zIiwiL2lob21lL2NyYy9tb2R1bGVzL0NvbXBpbGVyL2djYy84LjIuMCIsIi9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9jdWRhLzExLjYuMSIsIi9paG9t
++++ export _ModuleTable003_
++++ _ModuleTable004_=ZS9jcmMvbW9kdWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db3JlIixbInZlcnNpb24iXT0yLH0=
++++ export _ModuleTable004_
++++ _ModuleTable_Sz_=4
++++ export _ModuleTable_Sz_
++++ source /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh
+++++ '[' -n /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh ']'
+++++ this_script=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh
+++++++ dirname /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh
++++++ cd /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
++++++ pwd
+++++ export AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+++++ AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+++++ export PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
+++++ PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
+++++ '[' 1 = 1 ']'
+++++ '[' -z /ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64 ']'
+++++ export LD_LIBRARY_PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib:/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+++++ LD_LIBRARY_PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib:/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+++++ '[' 1 = 1 ']'
+++++ '[' -z '' ']'
+++++ export PERL5LIB=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/perl
+++++ PERL5LIB=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/perl
+++++ '[' 1 = 1 ']'
+++++ '[' -z '' ']'
+++++ export PYTHONPATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/python3.9/site-packages
+++++ PYTHONPATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/python3.9/site-packages
+++++ '[' 0 = 1 ']'
+++ '[' 0 = 0 ']'
++++ : -s sh
+++ eval
+++ echo /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+++ echo /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+++ export NODELOC=/scratch/slurm-996842
+++ NODELOC=/scratch/slurm-996842
+++ export USE_LOCAL_SCRATCH=1
+++ USE_LOCAL_SCRATCH=1
+++ export WEST_SIM_ROOT=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+++ WEST_SIM_ROOT=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
++++ basename /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+++ export SIM_NAME=test-weha_epr
+++ SIM_NAME=test-weha_epr
+++ echo 'simulation test-weha_epr root is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr'
+++ export WM_ZMQ_MASTER_HEARTBEAT=100
+++ WM_ZMQ_MASTER_HEARTBEAT=100
+++ export WM_ZMQ_WORKER_HEARTBEAT=100
+++ WM_ZMQ_WORKER_HEARTBEAT=100
+++ export WM_ZMQ_TIMEOUT_FACTOR=300
+++ WM_ZMQ_TIMEOUT_FACTOR=300
+++ export BASH=/bin/bash
+++ BASH=/bin/bash
+++ export PERL=/usr/bin/perl
+++ PERL=/usr/bin/perl
+++ export ZSH=/bin/zsh
+++ ZSH=/bin/zsh
+++ export IFCONFIG=/bin/ifconfig
+++ IFCONFIG=/bin/ifconfig
+++ export CUT=/usr/bin/cut
+++ CUT=/usr/bin/cut
+++ export TR=/usr/bin/tr
+++ TR=/usr/bin/tr
+++ export LN=/bin/ln
+++ LN=/bin/ln
+++ export CP=/bin/cp
+++ CP=/bin/cp
+++ export RM=/bin/rm
+++ RM=/bin/rm
+++ export SED=/bin/sed
+++ SED=/bin/sed
+++ export CAT=/bin/cat
+++ CAT=/bin/cat
+++ export HEAD=/bin/head
+++ HEAD=/bin/head
+++ export TAR=/bin/tar
+++ TAR=/bin/tar
+++ export AWK=/usr/bin/awk
+++ AWK=/usr/bin/awk
+++ export PASTE=/usr/bin/paste
+++ PASTE=/usr/bin/paste
+++ export GREP=/bin/grep
+++ GREP=/bin/grep
+++ export SORT=/usr/bin/sort
+++ SORT=/usr/bin/sort
+++ export UNIQ=/usr/bin/uniq
+++ UNIQ=/usr/bin/uniq
+++ export HEAD=/usr/bin/head
+++ HEAD=/usr/bin/head
+++ export MKDIR=/bin/mkdir
+++ MKDIR=/bin/mkdir
+++ export ECHO=/bin/echo
+++ ECHO=/bin/echo
+++ export DATE=/bin/date
+++ DATE=/bin/date
+++ export SANDER=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/sander
+++ SANDER=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/sander
+++ export PMEMD=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+++ PMEMD=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+++ export CPPTRAJ=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/cpptraj
+++ CPPTRAJ=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/cpptraj
++ sort
++ env
++ bash init.sh
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Warning: When compiling code please add the following flags to nvcc:
+         -gencode arch=compute_35,code=[compute_35,sm_35] \
+         -gencode arch=compute_61,code=[compute_61,sm_61] 
+         -gencode arch=compute_70,code=[compute_70,sm_70] 
+Warning: When compiling code please add the following flags to nvcc:
+         -gencode arch=compute_35,code=[compute_35,sm_35] \
+         -gencode arch=compute_61,code=[compute_61,sm_61] 
+         -gencode arch=compute_70,code=[compute_70,sm_70] 
++ cd /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
++ SERVER_INFO=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json
++ (( n=0 ))
++ (( n<120 ))
++ '[' -e /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json ']'
++ w_run --work-manager=zmq --n-workers=0 --zmq-mode=master --zmq-write-host-info=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json --zmq-comm-mode=tcp
++ sleep 1
++ (( n++ ))
++ (( n<120 ))
++ '[' -e /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json ']'
++ echo '== server info file /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json =='
++ cat /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json
++ break
++ '[' -e /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json ']'
+++ scontrol show hostname 'gpu-n[48-49]'
++ for node in '$(scontrol show hostname $SLURM_NODELIST)'
++ for node in '$(scontrol show hostname $SLURM_NODELIST)'
++ ssh -o StrictHostKeyChecking=no gpu-n48 /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/node.sh /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr 996842 gpu-n48 0,1,2,3 --work-manager=zmq --n-workers=4 --zmq-mode=client --zmq-read-host-info=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json --zmq-comm-mode=tcp
++ wait
++ ssh -o StrictHostKeyChecking=no gpu-n49 /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/node.sh /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr 996842 gpu-n49 0,1,2,3 --work-manager=zmq --n-workers=4 --zmq-mode=client --zmq-read-host-info=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json --zmq-comm-mode=tcp
++ cd /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
++ shift
++ source env.sh
+++ conda activate westpa-2.0
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate westpa-2.0
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(base) '
++++ __conda_exe shell.posix activate westpa-2.0
++++ /ihome/lchong/lel178/miniforge3/bin/conda shell.posix activate westpa-2.0
++ cd /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
++ shift
++ source env.sh
+++ conda activate westpa-2.0
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate westpa-2.0
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(base) '
++++ __conda_exe shell.posix activate westpa-2.0
++++ /ihome/lchong/lel178/miniforge3/bin/conda shell.posix activate westpa-2.0
+++ ask_conda='. "/ihome/lchong/lel178/miniforge3/etc/conda/deactivate.d/libxml2_deactivate.sh"
+PS1='\''(westpa-2.0) '\''
+export PATH='\''/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin'\''
+export CONDA_PREFIX='\''/ihome/lchong/lel178/miniforge3/envs/westpa-2.0'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''westpa-2.0'\''
+export CONDA_PROMPT_MODIFIER='\''(westpa-2.0) '\''
+export CONDA_PREFIX_1='\''/ihome/lchong/lel178/miniforge3'\''
+export CONDA_EXE='\''/ihome/lchong/lel178/miniforge3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/ihome/lchong/lel178/miniforge3/bin/python'\'''
+++ eval '. "/ihome/lchong/lel178/miniforge3/etc/conda/deactivate.d/libxml2_deactivate.sh"
+PS1='\''(westpa-2.0) '\''
+export PATH='\''/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin'\''
+export CONDA_PREFIX='\''/ihome/lchong/lel178/miniforge3/envs/westpa-2.0'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''westpa-2.0'\''
+export CONDA_PROMPT_MODIFIER='\''(westpa-2.0) '\''
+export CONDA_PREFIX_1='\''/ihome/lchong/lel178/miniforge3'\''
+export CONDA_EXE='\''/ihome/lchong/lel178/miniforge3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/ihome/lchong/lel178/miniforge3/bin/python'\'''
++++ . /ihome/lchong/lel178/miniforge3/etc/conda/deactivate.d/libxml2_deactivate.sh
+++++ test -n ''
+++++ unset XML_CATALOG_FILES
+++++ unset xml_catalog_files_libxml2
++++ PS1='(westpa-2.0) '
++++ export PATH=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
++++ PATH=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
++++ export CONDA_PREFIX=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0
++++ CONDA_PREFIX=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0
++++ export CONDA_SHLVL=2
++++ CONDA_SHLVL=2
++++ export CONDA_DEFAULT_ENV=westpa-2.0
++++ CONDA_DEFAULT_ENV=westpa-2.0
++++ export 'CONDA_PROMPT_MODIFIER=(westpa-2.0) '
++++ CONDA_PROMPT_MODIFIER='(westpa-2.0) '
++++ export CONDA_PREFIX_1=/ihome/lchong/lel178/miniforge3
++++ CONDA_PREFIX_1=/ihome/lchong/lel178/miniforge3
++++ export CONDA_EXE=/ihome/lchong/lel178/miniforge3/bin/conda
++++ CONDA_EXE=/ihome/lchong/lel178/miniforge3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/ihome/lchong/lel178/miniforge3/bin/python
++++ CONDA_PYTHON_EXE=/ihome/lchong/lel178/miniforge3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ module purge
++++ /ihome/crc/install/lmod/lmod/libexec/lmod bash purge
+++ ask_conda='. "/ihome/lchong/lel178/miniforge3/etc/conda/deactivate.d/libxml2_deactivate.sh"
+PS1='\''(westpa-2.0) '\''
+export PATH='\''/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin'\''
+export CONDA_PREFIX='\''/ihome/lchong/lel178/miniforge3/envs/westpa-2.0'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''westpa-2.0'\''
+export CONDA_PROMPT_MODIFIER='\''(westpa-2.0) '\''
+export CONDA_PREFIX_1='\''/ihome/lchong/lel178/miniforge3'\''
+export CONDA_EXE='\''/ihome/lchong/lel178/miniforge3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/ihome/lchong/lel178/miniforge3/bin/python'\'''
+++ eval '. "/ihome/lchong/lel178/miniforge3/etc/conda/deactivate.d/libxml2_deactivate.sh"
+PS1='\''(westpa-2.0) '\''
+export PATH='\''/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin'\''
+export CONDA_PREFIX='\''/ihome/lchong/lel178/miniforge3/envs/westpa-2.0'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''westpa-2.0'\''
+export CONDA_PROMPT_MODIFIER='\''(westpa-2.0) '\''
+export CONDA_PREFIX_1='\''/ihome/lchong/lel178/miniforge3'\''
+export CONDA_EXE='\''/ihome/lchong/lel178/miniforge3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/ihome/lchong/lel178/miniforge3/bin/python'\'''
++++ . /ihome/lchong/lel178/miniforge3/etc/conda/deactivate.d/libxml2_deactivate.sh
+++++ test -n ''
+++++ unset XML_CATALOG_FILES
+++++ unset xml_catalog_files_libxml2
++++ PS1='(westpa-2.0) '
++++ export PATH=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
++++ PATH=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
++++ export CONDA_PREFIX=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0
++++ CONDA_PREFIX=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0
++++ export CONDA_SHLVL=2
++++ CONDA_SHLVL=2
++++ export CONDA_DEFAULT_ENV=westpa-2.0
++++ CONDA_DEFAULT_ENV=westpa-2.0
++++ export 'CONDA_PROMPT_MODIFIER=(westpa-2.0) '
++++ CONDA_PROMPT_MODIFIER='(westpa-2.0) '
++++ export CONDA_PREFIX_1=/ihome/lchong/lel178/miniforge3
++++ CONDA_PREFIX_1=/ihome/lchong/lel178/miniforge3
++++ export CONDA_EXE=/ihome/lchong/lel178/miniforge3/bin/conda
++++ CONDA_EXE=/ihome/lchong/lel178/miniforge3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/ihome/lchong/lel178/miniforge3/bin/python
++++ CONDA_PYTHON_EXE=/ihome/lchong/lel178/miniforge3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ module purge
++++ /ihome/crc/install/lmod/lmod/libexec/lmod bash purge
+++ eval 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/ihome/crc/modules/Core";' export 'MODULEPATH;' 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/ihome/crc/modules/Core";' export 'MODULEPATH;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MCxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17fSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsWyJ2ZXJzaW9uIl09Mix9";' export '_ModuleTable001_;' '_ModuleTable_Sz_="1";' export '_ModuleTable_Sz_;'
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/ihome/crc/modules/Core
++++ export MODULEPATH
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/ihome/crc/modules/Core
++++ export MODULEPATH
++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MCxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17fSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsWyJ2ZXJzaW9uIl09Mix9
++++ export _ModuleTable001_
++++ _ModuleTable_Sz_=1
++++ export _ModuleTable_Sz_
+++ '[' 0 = 0 ']'
++++ : -s sh
+++ eval
+++ module load gcc/8.2.0 openmpi/4.0.3 amber/22-beta
++++ /ihome/crc/install/lmod/lmod/libexec/lmod bash load gcc/8.2.0 openmpi/4.0.3 amber/22-beta
+++ eval 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/ihome/crc/modules/Core";' export 'MODULEPATH;' 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/ihome/crc/modules/Core";' export 'MODULEPATH;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MCxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17fSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsWyJ2ZXJzaW9uIl09Mix9";' export '_ModuleTable001_;' '_ModuleTable_Sz_="1";' export '_ModuleTable_Sz_;'
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/ihome/crc/modules/Core
++++ export MODULEPATH
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/ihome/crc/modules/Core
++++ export MODULEPATH
++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MCxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17fSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZSIsWyJ2ZXJzaW9uIl09Mix9
++++ export _ModuleTable001_
++++ _ModuleTable_Sz_=1
++++ export _ModuleTable_Sz_
+++ '[' 0 = 0 ']'
++++ : -s sh
+++ eval
+++ module load gcc/8.2.0 openmpi/4.0.3 amber/22-beta
++++ /ihome/crc/install/lmod/lmod/libexec/lmod bash load gcc/8.2.0 openmpi/4.0.3 amber/22-beta
+Warning: When compiling code please add the following flags to nvcc:
+         -gencode arch=compute_35,code=[compute_35,sm_35] \
+         -gencode arch=compute_61,code=[compute_61,sm_61] 
+         -gencode arch=compute_70,code=[compute_70,sm_70] 
+++ eval 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/ihome/crc/modules/Core";' export 'MODULEPATH;' 'AMBERHOME="/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU";' export 'AMBERHOME;' 'CMAKE_PREFIX_PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0:/ihome/crc/install/cuda/11.6.1";' export 'CMAKE_PREFIX_PATH;' 'CPATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include";' export 'CPATH;' 'CPLUS_INCLUDE_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include";' export 'CPLUS_INCLUDE_PATH;' 'CUDAROOT="/ihome/crc/install/cuda/11.6.1";' export 'CUDAROOT;' 'CUDA_ROOT="/ihome/crc/install/cuda/11.6.1";' export 'CUDA_ROOT;' 'C_INCLUDE_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include";' export 'C_INCLUDE_PATH;' 'GCC_ROOT="/ihome/crc/install/gcc/8.2.0";' export 'GCC_ROOT;' 'INCLUDEPATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include";' export 'INCLUDEPATH;' 'INCLUDE_PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include";' export 'INCLUDE_PATH;' 'LD_LIBRARY_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64";' export 'LD_LIBRARY_PATH;' 'LD_RUN_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib64";' export 'LD_RUN_PATH;' 'LIBPATH="/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0";' export 'LIBPATH;' 'LIBRARY_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64";' export 'LIBRARY_PATH;' 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'LOADEDMODULES="cuda/11.6.1:gcc/8.2.0:openmpi/4.0.3:zlib/1.2.11:amber/22-beta";' export 'LOADEDMODULES;' 'MANPATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/share/man:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/share/man:/ihome/crc/install/gcc/8.2.0/share/man:/ihome/crc/install/cuda/11.6.1/doc/man:/ihome/crc/install/lmod/lmod/share/man::";' export 'MANPATH;' 'MODULEPATH="/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3:/ihome/crc/modules/Compiler/gcc/8.2.0:/ihome/crc/modules/Compiler/cuda/11.6.1:/ihome/crc/modules/Core";' export 'MODULEPATH;' 'MPI_ROOT="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0";' export 'MPI_ROOT;' 'OMPI_MCA_mpi_warn_on_fork="0";' export 'OMPI_MCA_mpi_warn_on_fork;' 'OPENMPI_ROOT="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0";' export 'OPENMPI_ROOT;' 'PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin";' export 'PATH;' 'PKG_CONFIG_PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib/pkgconfig";' export 'PKG_CONFIG_PATH;' 'ZLIB_HOME="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0";' export 'ZLIB_HOME;' '_LMFILES_="/ihome/crc/modules/Core/cuda/11.6.1.lua:/ihome/crc/modules/Core/gcc/8.2.0.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/openmpi/4.0.3.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/zlib/1.2.11.lua:/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3/amber/22-beta.lua";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09NSxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17YW1iZXI9e1siRk4iXT0iL2lob21lL2NyYy9tb2R1bGVzL01QSS9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy9hbWJlci8yMi1iZXRhLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImFtYmVyLzIyLWJldGEiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInNob3J0Il09ImFtYmVyIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sY3VkYT17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9jdWRhLzExLjYuMS5s";' export '_ModuleTable001_;' '_ModuleTable002_="dWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJjdWRhLzExLjYuMSIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iY3VkYSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGdjYz17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9nY2MvOC4yLjAubHVhIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0iZ2NjLzguMi4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzaG9ydCJdPSJnY2MiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxvcGVubXBpPXtbIkZOIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy5sdWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJvcGVubXBpLzQuMC4zIixbImxv";' export '_ModuleTable002_;' '_ModuleTable003_="YWRPcmRlciJdPTMscHJvcFQ9e30sWyJzaG9ydCJdPSJvcGVubXBpIixbInN0YXR1cyJdPSJhY3RpdmUiLH0semxpYj17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29tcGlsZXIvZ2NjLzguMi4wL3psaWIvMS4yLjExLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzaG9ydCJdPSJ6bGliIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvTVBJL2djYy84LjIuMC9vcGVubXBpLzQuMC4zIiwiL2lob21lL2NyYy9tb2R1bGVzL0NvbXBpbGVyL2djYy84LjIuMCIsIi9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9jdWRhLzExLjYuMSIsIi9paG9t";' export '_ModuleTable003_;' '_ModuleTable004_="ZS9jcmMvbW9kdWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db3JlIixbInZlcnNpb24iXT0yLH0=";' export '_ModuleTable004_;' '_ModuleTable_Sz_="4";' export '_ModuleTable_Sz_;' source '/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh;'
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/ihome/crc/modules/Core
++++ export MODULEPATH
++++ AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
++++ export AMBERHOME
++++ CMAKE_PREFIX_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0:/ihome/crc/install/cuda/11.6.1
++++ export CMAKE_PREFIX_PATH
++++ CPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
++++ export CPATH
++++ CPLUS_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
++++ export CPLUS_INCLUDE_PATH
++++ CUDAROOT=/ihome/crc/install/cuda/11.6.1
++++ export CUDAROOT
++++ CUDA_ROOT=/ihome/crc/install/cuda/11.6.1
++++ export CUDA_ROOT
++++ C_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
++++ export C_INCLUDE_PATH
++++ GCC_ROOT=/ihome/crc/install/gcc/8.2.0
++++ export GCC_ROOT
++++ INCLUDEPATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include
++++ export INCLUDEPATH
++++ INCLUDE_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
++++ export INCLUDE_PATH
++++ LD_LIBRARY_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
++++ export LD_LIBRARY_PATH
++++ LD_RUN_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib64
++++ export LD_RUN_PATH
++++ LIBPATH=/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0
++++ export LIBPATH
++++ LIBRARY_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
++++ export LIBRARY_PATH
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ LOADEDMODULES=cuda/11.6.1:gcc/8.2.0:openmpi/4.0.3:zlib/1.2.11:amber/22-beta
++++ export LOADEDMODULES
++++ MANPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/share/man:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/share/man:/ihome/crc/install/gcc/8.2.0/share/man:/ihome/crc/install/cuda/11.6.1/doc/man:/ihome/crc/install/lmod/lmod/share/man::
++++ export MANPATH
++++ MODULEPATH=/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3:/ihome/crc/modules/Compiler/gcc/8.2.0:/ihome/crc/modules/Compiler/cuda/11.6.1:/ihome/crc/modules/Core
++++ export MODULEPATH
++++ MPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
++++ export MPI_ROOT
++++ OMPI_MCA_mpi_warn_on_fork=0
++++ export OMPI_MCA_mpi_warn_on_fork
++++ OPENMPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
++++ export OPENMPI_ROOT
++++ PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
++++ export PATH
++++ PKG_CONFIG_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib/pkgconfig
++++ export PKG_CONFIG_PATH
++++ ZLIB_HOME=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0
++++ export ZLIB_HOME
++++ _LMFILES_=/ihome/crc/modules/Core/cuda/11.6.1.lua:/ihome/crc/modules/Core/gcc/8.2.0.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/openmpi/4.0.3.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/zlib/1.2.11.lua:/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3/amber/22-beta.lua
++++ export _LMFILES_
++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09NSxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17YW1iZXI9e1siRk4iXT0iL2lob21lL2NyYy9tb2R1bGVzL01QSS9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy9hbWJlci8yMi1iZXRhLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImFtYmVyLzIyLWJldGEiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInNob3J0Il09ImFtYmVyIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sY3VkYT17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9jdWRhLzExLjYuMS5s
++++ export _ModuleTable001_
++++ _ModuleTable002_=dWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJjdWRhLzExLjYuMSIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iY3VkYSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGdjYz17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9nY2MvOC4yLjAubHVhIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0iZ2NjLzguMi4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzaG9ydCJdPSJnY2MiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxvcGVubXBpPXtbIkZOIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy5sdWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJvcGVubXBpLzQuMC4zIixbImxv
++++ export _ModuleTable002_
++++ _ModuleTable003_=YWRPcmRlciJdPTMscHJvcFQ9e30sWyJzaG9ydCJdPSJvcGVubXBpIixbInN0YXR1cyJdPSJhY3RpdmUiLH0semxpYj17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29tcGlsZXIvZ2NjLzguMi4wL3psaWIvMS4yLjExLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzaG9ydCJdPSJ6bGliIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvTVBJL2djYy84LjIuMC9vcGVubXBpLzQuMC4zIiwiL2lob21lL2NyYy9tb2R1bGVzL0NvbXBpbGVyL2djYy84LjIuMCIsIi9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9jdWRhLzExLjYuMSIsIi9paG9t
++++ export _ModuleTable003_
++++ _ModuleTable004_=ZS9jcmMvbW9kdWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db3JlIixbInZlcnNpb24iXT0yLH0=
++++ export _ModuleTable004_
++++ _ModuleTable_Sz_=4
++++ export _ModuleTable_Sz_
++++ source /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh
+++++ '[' -n /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh ']'
+++++ this_script=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh
+++++++ dirname /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh
+Warning: When compiling code please add the following flags to nvcc:
+         -gencode arch=compute_35,code=[compute_35,sm_35] \
+         -gencode arch=compute_61,code=[compute_61,sm_61] 
+         -gencode arch=compute_70,code=[compute_70,sm_70] 
++++++ cd /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
++++++ pwd
+++++ export AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+++++ AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+++++ export PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
+++++ PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
+++++ '[' 1 = 1 ']'
+++++ '[' -z /ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64 ']'
+++++ export LD_LIBRARY_PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib:/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+++++ LD_LIBRARY_PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib:/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+++++ '[' 1 = 1 ']'
+++++ '[' -z '' ']'
+++++ export PERL5LIB=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/perl
+++++ PERL5LIB=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/perl
+++++ '[' 1 = 1 ']'
+++++ '[' -z '' ']'
+++++ export PYTHONPATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/python3.9/site-packages
+++++ PYTHONPATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/python3.9/site-packages
+++++ '[' 0 = 1 ']'
+++ '[' 0 = 0 ']'
++++ : -s sh
+++ eval
+++ echo /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+++ echo /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+++ export NODELOC=
+++ NODELOC=
+++ export USE_LOCAL_SCRATCH=1
+++ USE_LOCAL_SCRATCH=1
+++ export WEST_SIM_ROOT=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+++ WEST_SIM_ROOT=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
++++ basename /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+++ export SIM_NAME=test-weha_epr
+++ SIM_NAME=test-weha_epr
+++ echo 'simulation test-weha_epr root is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr'
+++ export WM_ZMQ_MASTER_HEARTBEAT=100
+++ WM_ZMQ_MASTER_HEARTBEAT=100
+++ export WM_ZMQ_WORKER_HEARTBEAT=100
+++ WM_ZMQ_WORKER_HEARTBEAT=100
+++ export WM_ZMQ_TIMEOUT_FACTOR=300
+++ WM_ZMQ_TIMEOUT_FACTOR=300
+++ export BASH=/bin/bash
+++ BASH=/bin/bash
+++ export PERL=/usr/bin/perl
+++ PERL=/usr/bin/perl
+++ export ZSH=/bin/zsh
+++ ZSH=/bin/zsh
+++ export IFCONFIG=/bin/ifconfig
+++ IFCONFIG=/bin/ifconfig
+++ export CUT=/usr/bin/cut
+++ CUT=/usr/bin/cut
+++ export TR=/usr/bin/tr
+++ TR=/usr/bin/tr
+++ export LN=/bin/ln
+++ LN=/bin/ln
+++ export CP=/bin/cp
+++ CP=/bin/cp
+++ export RM=/bin/rm
+++ RM=/bin/rm
+++ export SED=/bin/sed
+++ SED=/bin/sed
+++ export CAT=/bin/cat
+++ CAT=/bin/cat
+++ export HEAD=/bin/head
+++ HEAD=/bin/head
+++ export TAR=/bin/tar
+++ TAR=/bin/tar
+++ export AWK=/usr/bin/awk
+++ AWK=/usr/bin/awk
+++ export PASTE=/usr/bin/paste
+++ PASTE=/usr/bin/paste
+++ export GREP=/bin/grep
+++ GREP=/bin/grep
+++ export SORT=/usr/bin/sort
+++ SORT=/usr/bin/sort
+++ export UNIQ=/usr/bin/uniq
+++ UNIQ=/usr/bin/uniq
+++ export HEAD=/usr/bin/head
+++ HEAD=/usr/bin/head
+++ export MKDIR=/bin/mkdir
+++ MKDIR=/bin/mkdir
+++ export ECHO=/bin/echo
+++ ECHO=/bin/echo
+++ export DATE=/bin/date
+++ DATE=/bin/date
+++ export SANDER=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/sander
+++ SANDER=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/sander
+++ export PMEMD=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+++ PMEMD=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+++ export CPPTRAJ=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/cpptraj
+++ CPPTRAJ=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/cpptraj
++ export WEST_JOBID=996842
++ WEST_JOBID=996842
++ shift
++ export SLURM_NODENAME=gpu-n49
++ SLURM_NODENAME=gpu-n49
++ shift
++ export CUDA_VISIBLE_DEVICES_ALLOCATED=0,1,2,3
++ CUDA_VISIBLE_DEVICES_ALLOCATED=0,1,2,3
++ shift
++ echo 'starting WEST client processes on: '
++ hostname
++ echo 'current directory is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr'
++ echo 'environment is: '
++ env
++ sort
++ echo 'CUDA_VISIBLE_DEVICES = '
++ w_run --work-manager=zmq --n-workers=4 --zmq-mode=client --zmq-read-host-info=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json --zmq-comm-mode=tcp
+++ eval 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/ihome/crc/modules/Core";' export 'MODULEPATH;' 'AMBERHOME="/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU";' export 'AMBERHOME;' 'CMAKE_PREFIX_PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0:/ihome/crc/install/cuda/11.6.1";' export 'CMAKE_PREFIX_PATH;' 'CPATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include";' export 'CPATH;' 'CPLUS_INCLUDE_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include";' export 'CPLUS_INCLUDE_PATH;' 'CUDAROOT="/ihome/crc/install/cuda/11.6.1";' export 'CUDAROOT;' 'CUDA_ROOT="/ihome/crc/install/cuda/11.6.1";' export 'CUDA_ROOT;' 'C_INCLUDE_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include";' export 'C_INCLUDE_PATH;' 'GCC_ROOT="/ihome/crc/install/gcc/8.2.0";' export 'GCC_ROOT;' 'INCLUDEPATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include";' export 'INCLUDEPATH;' 'INCLUDE_PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include";' export 'INCLUDE_PATH;' 'LD_LIBRARY_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64";' export 'LD_LIBRARY_PATH;' 'LD_RUN_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib64";' export 'LD_RUN_PATH;' 'LIBPATH="/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0";' export 'LIBPATH;' 'LIBRARY_PATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64";' export 'LIBRARY_PATH;' 'LMOD_DEFAULT_MODULEPATH="/ihome/crc/modules/Core";' export 'LMOD_DEFAULT_MODULEPATH;' 'LOADEDMODULES="cuda/11.6.1:gcc/8.2.0:openmpi/4.0.3:zlib/1.2.11:amber/22-beta";' export 'LOADEDMODULES;' 'MANPATH="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/share/man:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/share/man:/ihome/crc/install/gcc/8.2.0/share/man:/ihome/crc/install/cuda/11.6.1/doc/man:/ihome/crc/install/lmod/lmod/share/man::";' export 'MANPATH;' 'MODULEPATH="/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3:/ihome/crc/modules/Compiler/gcc/8.2.0:/ihome/crc/modules/Compiler/cuda/11.6.1:/ihome/crc/modules/Core";' export 'MODULEPATH;' 'MPI_ROOT="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0";' export 'MPI_ROOT;' 'OMPI_MCA_mpi_warn_on_fork="0";' export 'OMPI_MCA_mpi_warn_on_fork;' 'OPENMPI_ROOT="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0";' export 'OPENMPI_ROOT;' 'PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin";' export 'PATH;' 'PKG_CONFIG_PATH="/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib/pkgconfig";' export 'PKG_CONFIG_PATH;' 'ZLIB_HOME="/ihome/crc/install/zlib/1.2.11/gcc/8.2.0";' export 'ZLIB_HOME;' '_LMFILES_="/ihome/crc/modules/Core/cuda/11.6.1.lua:/ihome/crc/modules/Core/gcc/8.2.0.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/openmpi/4.0.3.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/zlib/1.2.11.lua:/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3/amber/22-beta.lua";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09NSxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17YW1iZXI9e1siRk4iXT0iL2lob21lL2NyYy9tb2R1bGVzL01QSS9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy9hbWJlci8yMi1iZXRhLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImFtYmVyLzIyLWJldGEiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInNob3J0Il09ImFtYmVyIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sY3VkYT17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9jdWRhLzExLjYuMS5s";' export '_ModuleTable001_;' '_ModuleTable002_="dWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJjdWRhLzExLjYuMSIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iY3VkYSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGdjYz17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9nY2MvOC4yLjAubHVhIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0iZ2NjLzguMi4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzaG9ydCJdPSJnY2MiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxvcGVubXBpPXtbIkZOIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy5sdWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJvcGVubXBpLzQuMC4zIixbImxv";' export '_ModuleTable002_;' '_ModuleTable003_="YWRPcmRlciJdPTMscHJvcFQ9e30sWyJzaG9ydCJdPSJvcGVubXBpIixbInN0YXR1cyJdPSJhY3RpdmUiLH0semxpYj17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29tcGlsZXIvZ2NjLzguMi4wL3psaWIvMS4yLjExLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzaG9ydCJdPSJ6bGliIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvTVBJL2djYy84LjIuMC9vcGVubXBpLzQuMC4zIiwiL2lob21lL2NyYy9tb2R1bGVzL0NvbXBpbGVyL2djYy84LjIuMCIsIi9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9jdWRhLzExLjYuMSIsIi9paG9t";' export '_ModuleTable003_;' '_ModuleTable004_="ZS9jcmMvbW9kdWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db3JlIixbInZlcnNpb24iXT0yLH0=";' export '_ModuleTable004_;' '_ModuleTable_Sz_="4";' export '_ModuleTable_Sz_;' source '/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh;'
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/ihome/crc/modules/Core
++++ export MODULEPATH
++++ AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
++++ export AMBERHOME
++++ CMAKE_PREFIX_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0:/ihome/crc/install/cuda/11.6.1
++++ export CMAKE_PREFIX_PATH
++++ CPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
++++ export CPATH
++++ CPLUS_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
++++ export CPLUS_INCLUDE_PATH
++++ CUDAROOT=/ihome/crc/install/cuda/11.6.1
++++ export CUDAROOT
++++ CUDA_ROOT=/ihome/crc/install/cuda/11.6.1
++++ export CUDA_ROOT
++++ C_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
++++ export C_INCLUDE_PATH
++++ GCC_ROOT=/ihome/crc/install/gcc/8.2.0
++++ export GCC_ROOT
++++ INCLUDEPATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include
++++ export INCLUDEPATH
++++ INCLUDE_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
++++ export INCLUDE_PATH
++++ LD_LIBRARY_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
++++ export LD_LIBRARY_PATH
++++ LD_RUN_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib64
++++ export LD_RUN_PATH
++++ LIBPATH=/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0
++++ export LIBPATH
++++ LIBRARY_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
++++ export LIBRARY_PATH
++++ LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
++++ export LMOD_DEFAULT_MODULEPATH
++++ LOADEDMODULES=cuda/11.6.1:gcc/8.2.0:openmpi/4.0.3:zlib/1.2.11:amber/22-beta
++++ export LOADEDMODULES
++++ MANPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/share/man:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/share/man:/ihome/crc/install/gcc/8.2.0/share/man:/ihome/crc/install/cuda/11.6.1/doc/man:/ihome/crc/install/lmod/lmod/share/man::
++++ export MANPATH
++++ MODULEPATH=/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3:/ihome/crc/modules/Compiler/gcc/8.2.0:/ihome/crc/modules/Compiler/cuda/11.6.1:/ihome/crc/modules/Core
++++ export MODULEPATH
++++ MPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
++++ export MPI_ROOT
++++ OMPI_MCA_mpi_warn_on_fork=0
++++ export OMPI_MCA_mpi_warn_on_fork
++++ OPENMPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
++++ export OPENMPI_ROOT
++++ PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
++++ export PATH
++++ PKG_CONFIG_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib/pkgconfig
++++ export PKG_CONFIG_PATH
++++ ZLIB_HOME=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0
++++ export ZLIB_HOME
++++ _LMFILES_=/ihome/crc/modules/Core/cuda/11.6.1.lua:/ihome/crc/modules/Core/gcc/8.2.0.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/openmpi/4.0.3.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/zlib/1.2.11.lua:/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3/amber/22-beta.lua
++++ export _LMFILES_
++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09NSxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17YW1iZXI9e1siRk4iXT0iL2lob21lL2NyYy9tb2R1bGVzL01QSS9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy9hbWJlci8yMi1iZXRhLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImFtYmVyLzIyLWJldGEiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInNob3J0Il09ImFtYmVyIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sY3VkYT17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9jdWRhLzExLjYuMS5s
++++ export _ModuleTable001_
++++ _ModuleTable002_=dWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJjdWRhLzExLjYuMSIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iY3VkYSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGdjYz17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9nY2MvOC4yLjAubHVhIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0iZ2NjLzguMi4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzaG9ydCJdPSJnY2MiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxvcGVubXBpPXtbIkZOIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy5sdWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJvcGVubXBpLzQuMC4zIixbImxv
++++ export _ModuleTable002_
++++ _ModuleTable003_=YWRPcmRlciJdPTMscHJvcFQ9e30sWyJzaG9ydCJdPSJvcGVubXBpIixbInN0YXR1cyJdPSJhY3RpdmUiLH0semxpYj17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29tcGlsZXIvZ2NjLzguMi4wL3psaWIvMS4yLjExLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzaG9ydCJdPSJ6bGliIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvTVBJL2djYy84LjIuMC9vcGVubXBpLzQuMC4zIiwiL2lob21lL2NyYy9tb2R1bGVzL0NvbXBpbGVyL2djYy84LjIuMCIsIi9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9jdWRhLzExLjYuMSIsIi9paG9t
++++ export _ModuleTable003_
++++ _ModuleTable004_=ZS9jcmMvbW9kdWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db3JlIixbInZlcnNpb24iXT0yLH0=
++++ export _ModuleTable004_
++++ _ModuleTable_Sz_=4
++++ export _ModuleTable_Sz_
++++ source /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh
+++++ '[' -n /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh ']'
+++++ this_script=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh
+++++++ dirname /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/amber.sh
++++++ cd /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
++++++ pwd
+++++ export AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+++++ AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+++++ export PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
+++++ PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
+++++ '[' 1 = 1 ']'
+++++ '[' -z /ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64 ']'
+++++ export LD_LIBRARY_PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib:/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+++++ LD_LIBRARY_PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib:/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+++++ '[' 1 = 1 ']'
+++++ '[' -z '' ']'
+++++ export PERL5LIB=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/perl
+++++ PERL5LIB=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/perl
+++++ '[' 1 = 1 ']'
+++++ '[' -z '' ']'
+++++ export PYTHONPATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/python3.9/site-packages
+++++ PYTHONPATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/python3.9/site-packages
+++++ '[' 0 = 1 ']'
+++ '[' 0 = 0 ']'
++++ : -s sh
+++ eval
+++ echo /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+++ echo /ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+++ export NODELOC=
+++ NODELOC=
+++ export USE_LOCAL_SCRATCH=1
+++ USE_LOCAL_SCRATCH=1
+++ export WEST_SIM_ROOT=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+++ WEST_SIM_ROOT=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
++++ basename /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+++ export SIM_NAME=test-weha_epr
+++ SIM_NAME=test-weha_epr
+++ echo 'simulation test-weha_epr root is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr'
+++ export WM_ZMQ_MASTER_HEARTBEAT=100
+++ WM_ZMQ_MASTER_HEARTBEAT=100
+++ export WM_ZMQ_WORKER_HEARTBEAT=100
+++ WM_ZMQ_WORKER_HEARTBEAT=100
+++ export WM_ZMQ_TIMEOUT_FACTOR=300
+++ WM_ZMQ_TIMEOUT_FACTOR=300
+++ export BASH=/bin/bash
+++ BASH=/bin/bash
+++ export PERL=/usr/bin/perl
+++ PERL=/usr/bin/perl
+++ export ZSH=/bin/zsh
+++ ZSH=/bin/zsh
+++ export IFCONFIG=/bin/ifconfig
+++ IFCONFIG=/bin/ifconfig
+++ export CUT=/usr/bin/cut
+++ CUT=/usr/bin/cut
+++ export TR=/usr/bin/tr
+++ TR=/usr/bin/tr
+++ export LN=/bin/ln
+++ LN=/bin/ln
+++ export CP=/bin/cp
+++ CP=/bin/cp
+++ export RM=/bin/rm
+++ RM=/bin/rm
+++ export SED=/bin/sed
+++ SED=/bin/sed
+++ export CAT=/bin/cat
+++ CAT=/bin/cat
+++ export HEAD=/bin/head
+++ HEAD=/bin/head
+++ export TAR=/bin/tar
+++ TAR=/bin/tar
+++ export AWK=/usr/bin/awk
+++ AWK=/usr/bin/awk
+++ export PASTE=/usr/bin/paste
+++ PASTE=/usr/bin/paste
+++ export GREP=/bin/grep
+++ GREP=/bin/grep
+++ export SORT=/usr/bin/sort
+++ SORT=/usr/bin/sort
+++ export UNIQ=/usr/bin/uniq
+++ UNIQ=/usr/bin/uniq
+++ export HEAD=/usr/bin/head
+++ HEAD=/usr/bin/head
+++ export MKDIR=/bin/mkdir
+++ MKDIR=/bin/mkdir
+++ export ECHO=/bin/echo
+++ ECHO=/bin/echo
+++ export DATE=/bin/date
+++ DATE=/bin/date
+++ export SANDER=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/sander
+++ SANDER=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/sander
+++ export PMEMD=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+++ PMEMD=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+++ export CPPTRAJ=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/cpptraj
+++ CPPTRAJ=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/cpptraj
++ export WEST_JOBID=996842
++ WEST_JOBID=996842
++ shift
++ export SLURM_NODENAME=gpu-n48
++ SLURM_NODENAME=gpu-n48
++ shift
++ export CUDA_VISIBLE_DEVICES_ALLOCATED=0,1,2,3
++ CUDA_VISIBLE_DEVICES_ALLOCATED=0,1,2,3
++ shift
++ echo 'starting WEST client processes on: '
++ hostname
++ echo 'current directory is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr'
++ echo 'environment is: '
++ env
++ sort
++ echo 'CUDA_VISIBLE_DEVICES = '
++ w_run --work-manager=zmq --n-workers=4 --zmq-mode=client --zmq-read-host-info=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json --zmq-comm-mode=tcp
++ echo 'Shutting down.  Hopefully this was on purpose?'
++ echo 'Shutting down.  Hopefully this was on purpose?'

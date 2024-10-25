@@ -1,0 +1,445 @@
+/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+simulation test-weha_epr root is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+}
+}
+ [ $? = 0 ] && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+AWK=/usr/bin/awk
+BASH=/bin/bash
+BASH_ENV=/ihome/crc/install/lmod/lmod/init/bash
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd "$@")
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash "$@");
+CAT=/bin/cat
+_CE_CONDA=
+_CE_M=
+C_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
+CMAKE_PREFIX_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0:/ihome/crc/install/cuda/11.6.1
+CONDA_DEFAULT_ENV=westpa-2.0
+CONDA_EXE=/ihome/lchong/lel178/miniforge3/bin/conda
+CONDA_PREFIX_1=/ihome/lchong/lel178/miniforge3
+CONDA_PREFIX=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0
+CONDA_PROMPT_MODIFIER=(westpa-2.0) 
+CONDA_PYTHON_EXE=/ihome/lchong/lel178/miniforge3/bin/python
+CONDA_SHLVL=2
+CPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
+CP=/bin/cp
+CPLUS_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
+CPPTRAJ=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/cpptraj
+CUDA_ROOT=/ihome/crc/install/cuda/11.6.1
+CUDAROOT=/ihome/crc/install/cuda/11.6.1
+CUDA_VISIBLE_DEVICES=0,1,2,3
+CUT=/usr/bin/cut
+DATE=/bin/date
+ECHO=/bin/echo
+ENVIRONMENT=BATCH
+GCC_ROOT=/ihome/crc/install/gcc/8.2.0
+GPU_DEVICE_ORDINAL=0,1,2,3
+GREP=/bin/grep
+HEAD=/usr/bin/head
+HISTCONTROL=ignoredups
+HISTSIZE=1000
+HOME=/ihome/lchong/lel178
+HOSTNAME=gpu-n48
+IFCONFIG=/bin/ifconfig
+INCLUDEPATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include
+INCLUDE_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
+KDEDIRS=/usr
+LANG=en_US.UTF-8
+LD_LIBRARY_PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib:/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+LD_RUN_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib64
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LIBPATH=/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0
+LIBRARY_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+_LMFILES_=/ihome/crc/modules/Core/cuda/11.6.1.lua:/ihome/crc/modules/Core/gcc/8.2.0.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/openmpi/4.0.3.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/zlib/1.2.11.lua:/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3/amber/22-beta.lua
+LMOD_arch=x86_64
+LMOD_CMD=/ihome/crc/install/lmod/lmod/libexec/lmod
+LMOD_COLORIZE=yes
+LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
+LMOD_DIR=/ihome/crc/install/lmod/lmod/libexec
+LMOD_FULL_SETTARG_SUPPORT=no
+LMOD_PKG=/ihome/crc/install/lmod/lmod
+LMOD_PREPEND_BLOCK=normal
+LMOD_SETTARG_CMD=:
+LMOD_sys=Linux
+LMOD_VERSION=6.6.3
+LN=/bin/ln
+LOADEDMODULES=cuda/11.6.1:gcc/8.2.0:openmpi/4.0.3:zlib/1.2.11:amber/22-beta
+LOCAL=/scratch/slurm-996842
+LOGNAME=lel178
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+MAIL=/var/spool/mail/lel178
+MANPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/share/man:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/share/man:/ihome/crc/install/gcc/8.2.0/share/man:/ihome/crc/install/cuda/11.6.1/doc/man:/ihome/crc/install/lmod/lmod/share/man::
+MKDIR=/bin/mkdir
+MODULEPATH=/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3:/ihome/crc/modules/Compiler/gcc/8.2.0:/ihome/crc/modules/Compiler/cuda/11.6.1:/ihome/crc/modules/Core
+MODULEPATH_ROOT=/ihome/crc/modules
+MODULESHOME=/ihome/crc/install/lmod/lmod
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09NSxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17YW1iZXI9e1siRk4iXT0iL2lob21lL2NyYy9tb2R1bGVzL01QSS9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy9hbWJlci8yMi1iZXRhLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImFtYmVyLzIyLWJldGEiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInNob3J0Il09ImFtYmVyIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sY3VkYT17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9jdWRhLzExLjYuMS5s
+_ModuleTable002_=dWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJjdWRhLzExLjYuMSIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iY3VkYSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGdjYz17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9nY2MvOC4yLjAubHVhIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0iZ2NjLzguMi4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzaG9ydCJdPSJnY2MiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxvcGVubXBpPXtbIkZOIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy5sdWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJvcGVubXBpLzQuMC4zIixbImxv
+_ModuleTable003_=YWRPcmRlciJdPTMscHJvcFQ9e30sWyJzaG9ydCJdPSJvcGVubXBpIixbInN0YXR1cyJdPSJhY3RpdmUiLH0semxpYj17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29tcGlsZXIvZ2NjLzguMi4wL3psaWIvMS4yLjExLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzaG9ydCJdPSJ6bGliIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvTVBJL2djYy84LjIuMC9vcGVubXBpLzQuMC4zIiwiL2lob21lL2NyYy9tb2R1bGVzL0NvbXBpbGVyL2djYy84LjIuMCIsIi9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9jdWRhLzExLjYuMSIsIi9paG9t
+_ModuleTable004_=ZS9jcmMvbW9kdWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db3JlIixbInZlcnNpb24iXT0yLH0=
+_ModuleTable_Sz_=4
+MPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
+NODELOC=/scratch/slurm-996842
+OLDPWD=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+OMPI_MCA_mpi_warn_on_fork=0
+OPENMPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
+PASTE=/usr/bin/paste
+PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
+PERL5LIB=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/perl
+PERL=/usr/bin/perl
+PKG_CONFIG_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib/pkgconfig
+PMEMD=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+PWD=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+PYTHONPATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/python3.9/site-packages
+QTDIR=/usr/lib64/qt-3.3
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTINC=/usr/lib64/qt-3.3/include
+QTLIB=/usr/lib64/qt-3.3/lib
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+RM=/bin/rm
+ROCR_VISIBLE_DEVICES=0,1,2,3
+SANDER=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/sander
+SED=/bin/sed
+SELINUX_LEVEL_REQUESTED=
+SELINUX_ROLE_REQUESTED=
+SELINUX_USE_CURRENT_RANGE=
+SHELL=/bin/bash
+SHLVL=2
+SIM_NAME=test-weha_epr
+SLURM_CLUSTER_NAME=gpu
+SLURM_CONF=/etc/slurm/slurm.conf
+SLURM_CPUS_ON_NODE=64
+SLURMD_NODENAME=gpu-n48
+SLURM_GPUS_ON_NODE=4
+SLURM_GTIDS=0
+SLURM_JOB_ACCOUNT=lchong
+SLURM_JOB_CPUS_PER_NODE=64(x2)
+SLURM_JOB_GID=16028
+SLURM_JOB_GPUS=0,1,2,3
+SLURM_JOB_ID=996842
+SLURM_JOBID=996842
+SLURM_JOB_NAME=wea2
+SLURM_JOB_NODELIST=gpu-n[48-49]
+SLURM_JOB_NUM_NODES=2
+SLURM_JOB_PARTITION=a100_multi
+SLURM_JOB_QOS=gpu-a100_multi-s-invest
+SLURM_JOB_UID=158782
+SLURM_JOB_USER=lel178
+SLURM_LOCALID=0
+SLURM_MEM_PER_CPU=8000
+SLURM_NNODES=2
+SLURM_NODE_ALIASES=(null)
+SLURM_NODEID=0
+SLURM_NODELIST=gpu-n[48-49]
+SLURM_NPROCS=8
+SLURM_NTASKS=8
+SLURM_NTASKS_PER_NODE=4
+SLURM_PRIO_PROCESS=0
+SLURM_PROCID=0
+SLURM_SCRATCH=/scratch/slurm-996842
+SLURM_SCRIPT_CONTEXT=prolog_task
+SLURM_SUBMIT_DIR=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+SLURM_SUBMIT_HOST=login1.crc.pitt.edu
+SLURM_TASK_PID=57842
+SLURM_TASKS_PER_NODE=4(x2)
+SLURM_TOPOLOGY_ADDR=gpu-n48
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_WORKING_CLUSTER=gpu:10.201.0.94:6817:9728:109
+SORT=/usr/bin/sort
+SSH_CLIENT=10.25.228.141 64377 22
+SSH_CONNECTION=10.25.228.141 64377 136.142.28.137 22
+SSH_TTY=/dev/pts/14
+TAR=/bin/tar
+TERM=xterm-256color
+TMPDIR=/scratch/slurm-996842
+TR=/usr/bin/tr
+UNIQ=/usr/bin/uniq
+USE_LOCAL_SCRATCH=1
+USER=lel178
+_=/usr/bin/env
+WEST_SIM_ROOT=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+WM_ZMQ_MASTER_HEARTBEAT=100
+WM_ZMQ_TIMEOUT_FACTOR=300
+WM_ZMQ_WORKER_HEARTBEAT=100
+XDG_DATA_DIRS=/ihome/lchong/lel178/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_RUNTIME_DIR=/run/user/158782
+XDG_SESSION_ID=46311
+ZE_AFFINITY_MASK=0,1,2,3
+ZLIB_HOME=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0
+ZSH=/bin/zsh
+/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+simulation test-weha_epr root is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+--bstate-file /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/bstates/bstates.txt
+Updating system with the options from the configuration file
+Creating HDF5 file '/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west.h5'
+0 target state(s) present
+Calculating progress coordinate values for basis states.
+10 basis state(s) present
+Calculating progress coordinate values for start states.
+0 start state(s) present
+Preparing initial states
+
+ ## IT 0 temp current step 0.5 temp next step 0.503125 delta T 0.0031250000000000444 
+
+
+        Total bins:            1
+        Initial replicas:      50 in 1 bins, total weight = 1
+        Total target replicas: 50
+        
+1-prob: -4.4409e-16
+Simulation prepared.
+1 of 1 (100.000000%) active bins are populated
+per-bin minimum non-zero probability:       1
+per-bin maximum probability:                1
+per-bin probability dynamic range (kT):     0
+per-segment minimum non-zero probability:   0.02
+per-segment maximum non-zero probability:   0.02
+per-segment probability dynamic range (kT): 0
+norm = 1, error in norm = 0 (0*epsilon)
+== server info file /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr/west_zmq_info-996842.json ==
+{"rr_endpoint": "tcp://gpu-n48.crc.pitt.edu:35186", "ann_endpoint": "tcp://gpu-n48.crc.pitt.edu:58449"}/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+simulation test-weha_epr root is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+starting WEST client processes on: 
+gpu-n49.crc.pitt.edu
+current directory is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+environment is: 
+}
+}
+ [ $? = 0 ] && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+AWK=/usr/bin/awk
+BASH=/bin/bash
+BASH_ENV=/ihome/crc/install/lmod/lmod/init/bash
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd "$@")
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash "$@");
+CAT=/bin/cat
+_CE_CONDA=
+_CE_M=
+C_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
+CMAKE_PREFIX_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0:/ihome/crc/install/cuda/11.6.1
+CONDA_DEFAULT_ENV=westpa-2.0
+CONDA_EXE=/ihome/lchong/lel178/miniforge3/bin/conda
+CONDA_PREFIX_1=/ihome/lchong/lel178/miniforge3
+CONDA_PREFIX=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0
+CONDA_PROMPT_MODIFIER=(westpa-2.0) 
+CONDA_PYTHON_EXE=/ihome/lchong/lel178/miniforge3/bin/python
+CONDA_SHLVL=2
+CPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
+CP=/bin/cp
+CPLUS_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
+CPPTRAJ=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/cpptraj
+CUDA_ROOT=/ihome/crc/install/cuda/11.6.1
+CUDAROOT=/ihome/crc/install/cuda/11.6.1
+CUDA_VISIBLE_DEVICES_ALLOCATED=0,1,2,3
+CUT=/usr/bin/cut
+DATE=/bin/date
+ECHO=/bin/echo
+GCC_ROOT=/ihome/crc/install/gcc/8.2.0
+GREP=/bin/grep
+HEAD=/usr/bin/head
+HISTCONTROL=ignoredups
+HISTSIZE=1000
+HOME=/ihome/lchong/lel178
+HOSTNAME=gpu-n49.crc.pitt.edu
+IFCONFIG=/bin/ifconfig
+INCLUDEPATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include
+INCLUDE_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
+LANG=en_US.UTF-8
+LD_LIBRARY_PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib:/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+LD_RUN_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib64
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LIBPATH=/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0
+LIBRARY_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+_LMFILES_=/ihome/crc/modules/Core/cuda/11.6.1.lua:/ihome/crc/modules/Core/gcc/8.2.0.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/openmpi/4.0.3.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/zlib/1.2.11.lua:/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3/amber/22-beta.lua
+LMOD_arch=x86_64
+LMOD_CMD=/ihome/crc/install/lmod/lmod/libexec/lmod
+LMOD_COLORIZE=yes
+LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
+LMOD_DIR=/ihome/crc/install/lmod/lmod/libexec
+LMOD_FULL_SETTARG_SUPPORT=no
+LMOD_PKG=/ihome/crc/install/lmod/lmod
+LMOD_PREPEND_BLOCK=normal
+LMOD_SETTARG_CMD=:
+LMOD_sys=Linux
+LMOD_VERSION=6.6.3
+LN=/bin/ln
+LOADEDMODULES=cuda/11.6.1:gcc/8.2.0:openmpi/4.0.3:zlib/1.2.11:amber/22-beta
+LOGNAME=lel178
+MAIL=/var/spool/mail/lel178
+MANPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/share/man:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/share/man:/ihome/crc/install/gcc/8.2.0/share/man:/ihome/crc/install/cuda/11.6.1/doc/man:/ihome/crc/install/lmod/lmod/share/man::
+MKDIR=/bin/mkdir
+MODULEPATH=/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3:/ihome/crc/modules/Compiler/gcc/8.2.0:/ihome/crc/modules/Compiler/cuda/11.6.1:/ihome/crc/modules/Core
+MODULEPATH_ROOT=/ihome/crc/modules
+MODULESHOME=/ihome/crc/install/lmod/lmod
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09NSxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17YW1iZXI9e1siRk4iXT0iL2lob21lL2NyYy9tb2R1bGVzL01QSS9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy9hbWJlci8yMi1iZXRhLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImFtYmVyLzIyLWJldGEiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInNob3J0Il09ImFtYmVyIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sY3VkYT17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9jdWRhLzExLjYuMS5s
+_ModuleTable002_=dWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJjdWRhLzExLjYuMSIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iY3VkYSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGdjYz17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9nY2MvOC4yLjAubHVhIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0iZ2NjLzguMi4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzaG9ydCJdPSJnY2MiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxvcGVubXBpPXtbIkZOIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy5sdWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJvcGVubXBpLzQuMC4zIixbImxv
+_ModuleTable003_=YWRPcmRlciJdPTMscHJvcFQ9e30sWyJzaG9ydCJdPSJvcGVubXBpIixbInN0YXR1cyJdPSJhY3RpdmUiLH0semxpYj17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29tcGlsZXIvZ2NjLzguMi4wL3psaWIvMS4yLjExLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzaG9ydCJdPSJ6bGliIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvTVBJL2djYy84LjIuMC9vcGVubXBpLzQuMC4zIiwiL2lob21lL2NyYy9tb2R1bGVzL0NvbXBpbGVyL2djYy84LjIuMCIsIi9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9jdWRhLzExLjYuMSIsIi9paG9t
+_ModuleTable004_=ZS9jcmMvbW9kdWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db3JlIixbInZlcnNpb24iXT0yLH0=
+_ModuleTable_Sz_=4
+MPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
+NODELOC=
+OLDPWD=/ihome/lchong/lel178
+OMPI_MCA_mpi_warn_on_fork=0
+OPENMPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
+PASTE=/usr/bin/paste
+PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
+PERL5LIB=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/perl
+PERL=/usr/bin/perl
+PKG_CONFIG_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib/pkgconfig
+PMEMD=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+PWD=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+PYTHONPATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/python3.9/site-packages
+RM=/bin/rm
+SANDER=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/sander
+SED=/bin/sed
+SHELL=/bin/bash
+SHLVL=2
+SIM_NAME=test-weha_epr
+SLURM_NODENAME=gpu-n49
+SORT=/usr/bin/sort
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_CLIENT=10.201.2.227 57382 22
+SSH_CONNECTION=10.201.2.227 57382 10.201.2.228 22
+TAR=/bin/tar
+TR=/usr/bin/tr
+UNIQ=/usr/bin/uniq
+USE_LOCAL_SCRATCH=1
+USER=lel178
+_=/usr/bin/env
+WEST_JOBID=996842
+WEST_SIM_ROOT=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+WM_ZMQ_MASTER_HEARTBEAT=100
+WM_ZMQ_TIMEOUT_FACTOR=300
+WM_ZMQ_WORKER_HEARTBEAT=100
+XDG_DATA_DIRS=/ihome/lchong/lel178/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_RUNTIME_DIR=/run/user/158782
+XDG_SESSION_ID=102119
+ZLIB_HOME=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0
+ZSH=/bin/zsh
+CUDA_VISIBLE_DEVICES = 
+/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+simulation test-weha_epr root is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+starting WEST client processes on: 
+gpu-n48.crc.pitt.edu
+current directory is /ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+environment is: 
+}
+}
+ [ $? = 0 ] && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+AMBERHOME=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU
+AWK=/usr/bin/awk
+BASH=/bin/bash
+BASH_ENV=/ihome/crc/install/lmod/lmod/init/bash
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd "$@")
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash "$@");
+CAT=/bin/cat
+_CE_CONDA=
+_CE_M=
+C_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
+CMAKE_PREFIX_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0:/ihome/crc/install/cuda/11.6.1
+CONDA_DEFAULT_ENV=westpa-2.0
+CONDA_EXE=/ihome/lchong/lel178/miniforge3/bin/conda
+CONDA_PREFIX_1=/ihome/lchong/lel178/miniforge3
+CONDA_PREFIX=/ihome/lchong/lel178/miniforge3/envs/westpa-2.0
+CONDA_PROMPT_MODIFIER=(westpa-2.0) 
+CONDA_PYTHON_EXE=/ihome/lchong/lel178/miniforge3/bin/python
+CONDA_SHLVL=2
+CPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
+CP=/bin/cp
+CPLUS_INCLUDE_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/include
+CPPTRAJ=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/cpptraj
+CUDA_ROOT=/ihome/crc/install/cuda/11.6.1
+CUDAROOT=/ihome/crc/install/cuda/11.6.1
+CUDA_VISIBLE_DEVICES_ALLOCATED=0,1,2,3
+CUT=/usr/bin/cut
+DATE=/bin/date
+ECHO=/bin/echo
+GCC_ROOT=/ihome/crc/install/gcc/8.2.0
+GREP=/bin/grep
+HEAD=/usr/bin/head
+HISTCONTROL=ignoredups
+HISTSIZE=1000
+HOME=/ihome/lchong/lel178
+HOSTNAME=gpu-n48.crc.pitt.edu
+IFCONFIG=/bin/ifconfig
+INCLUDEPATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include
+INCLUDE_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/include:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include:/ihome/crc/install/gcc/8.2.0/include
+LANG=en_US.UTF-8
+LD_LIBRARY_PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib:/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+LD_RUN_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib64
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LIBPATH=/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0
+LIBRARY_PATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/lib:/ihome/crc/install/gcc/8.2.0/lib/gcc/x86_64-pc-linux-gnu/8.2.0:/ihome/crc/install/gcc/8.2.0/lib64:/usr/lib64:/ihome/crc/install/cuda/11.6.1/lib64/stubs:/ihome/crc/install/cuda/11.6.1/lib64
+_LMFILES_=/ihome/crc/modules/Core/cuda/11.6.1.lua:/ihome/crc/modules/Core/gcc/8.2.0.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/openmpi/4.0.3.lua:/ihome/crc/modules/Compiler/gcc/8.2.0/zlib/1.2.11.lua:/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3/amber/22-beta.lua
+LMOD_arch=x86_64
+LMOD_CMD=/ihome/crc/install/lmod/lmod/libexec/lmod
+LMOD_COLORIZE=yes
+LMOD_DEFAULT_MODULEPATH=/ihome/crc/modules/Core
+LMOD_DIR=/ihome/crc/install/lmod/lmod/libexec
+LMOD_FULL_SETTARG_SUPPORT=no
+LMOD_PKG=/ihome/crc/install/lmod/lmod
+LMOD_PREPEND_BLOCK=normal
+LMOD_SETTARG_CMD=:
+LMOD_sys=Linux
+LMOD_VERSION=6.6.3
+LN=/bin/ln
+LOADEDMODULES=cuda/11.6.1:gcc/8.2.0:openmpi/4.0.3:zlib/1.2.11:amber/22-beta
+LOGNAME=lel178
+MAIL=/var/spool/mail/lel178
+MANPATH=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0/share/man:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/share/man:/ihome/crc/install/gcc/8.2.0/share/man:/ihome/crc/install/cuda/11.6.1/doc/man:/ihome/crc/install/lmod/lmod/share/man::
+MKDIR=/bin/mkdir
+MODULEPATH=/ihome/crc/modules/MPI/gcc/8.2.0/openmpi/4.0.3:/ihome/crc/modules/Compiler/gcc/8.2.0:/ihome/crc/modules/Compiler/cuda/11.6.1:/ihome/crc/modules/Core
+MODULEPATH_ROOT=/ihome/crc/modules
+MODULESHOME=/ihome/crc/install/lmod/lmod
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09NSxiYXNlTXBhdGhBPXsiL2lob21lL2NyYy9tb2R1bGVzL0NvcmUiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17YW1iZXI9e1siRk4iXT0iL2lob21lL2NyYy9tb2R1bGVzL01QSS9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy9hbWJlci8yMi1iZXRhLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImFtYmVyLzIyLWJldGEiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInNob3J0Il09ImFtYmVyIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sY3VkYT17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9jdWRhLzExLjYuMS5s
+_ModuleTable002_=dWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJjdWRhLzExLjYuMSIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iY3VkYSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGdjYz17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29yZS9nY2MvOC4yLjAubHVhIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0iZ2NjLzguMi4wIixbImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzaG9ydCJdPSJnY2MiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxvcGVubXBpPXtbIkZOIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9nY2MvOC4yLjAvb3Blbm1waS80LjAuMy5sdWEiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJvcGVubXBpLzQuMC4zIixbImxv
+_ModuleTable003_=YWRPcmRlciJdPTMscHJvcFQ9e30sWyJzaG9ydCJdPSJvcGVubXBpIixbInN0YXR1cyJdPSJhY3RpdmUiLH0semxpYj17WyJGTiJdPSIvaWhvbWUvY3JjL21vZHVsZXMvQ29tcGlsZXIvZ2NjLzguMi4wL3psaWIvMS4yLjExLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzaG9ydCJdPSJ6bGliIixbInN0YXR1cyJdPSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvaWhvbWUvY3JjL21vZHVsZXMvTVBJL2djYy84LjIuMC9vcGVubXBpLzQuMC4zIiwiL2lob21lL2NyYy9tb2R1bGVzL0NvbXBpbGVyL2djYy84LjIuMCIsIi9paG9tZS9jcmMvbW9kdWxlcy9Db21waWxlci9jdWRhLzExLjYuMSIsIi9paG9t
+_ModuleTable004_=ZS9jcmMvbW9kdWxlcy9Db3JlIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9paG9tZS9jcmMvbW9kdWxlcy9Db3JlIixbInZlcnNpb24iXT0yLH0=
+_ModuleTable_Sz_=4
+MPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
+NODELOC=
+OLDPWD=/ihome/lchong/lel178
+OMPI_MCA_mpi_warn_on_fork=0
+OPENMPI_ROOT=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0
+PASTE=/usr/bin/paste
+PATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin:/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/bin:/ihome/crc/install/gcc/8.2.0/bin:/ihome/crc/install/cuda/11.6.1/bin:/ihome/lchong/lel178/miniforge3/envs/westpa-2.0/bin:/ihome/lchong/lel178/miniforge3/condabin:/ihome/lchong/lel178/.local/bin:/ihome/lchong/lel178/bin:/usr/local/bin:/usr/bin:/ihome/crc/pipx/bin:/usr/local/sbin:/usr/sbin:/ihome/crc/pipx/bin
+PERL5LIB=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/perl
+PERL=/usr/bin/perl
+PKG_CONFIG_PATH=/ihome/crc/install/openmpi/4.0.3/gcc-8.2.0/lib/pkgconfig
+PMEMD=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/pmemd.cuda
+PWD=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+PYTHONPATH=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/lib/python3.9/site-packages
+RM=/bin/rm
+SANDER=/ihome/crc/install/amber/amber_git_20220228/amber20_build-GNU/bin/sander
+SED=/bin/sed
+SHELL=/bin/bash
+SHLVL=2
+SIM_NAME=test-weha_epr
+SLURM_NODENAME=gpu-n48
+SORT=/usr/bin/sort
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_CLIENT=10.201.2.227 51688 22
+SSH_CONNECTION=10.201.2.227 51688 10.201.2.227 22
+TAR=/bin/tar
+TR=/usr/bin/tr
+UNIQ=/usr/bin/uniq
+USE_LOCAL_SCRATCH=1
+USER=lel178
+_=/usr/bin/env
+WEST_JOBID=996842
+WEST_SIM_ROOT=/ix/lchong/lel178/torsion_scaling/amber_lambda/weha_epr/test-weha_epr
+WM_ZMQ_MASTER_HEARTBEAT=100
+WM_ZMQ_TIMEOUT_FACTOR=300
+WM_ZMQ_WORKER_HEARTBEAT=100
+XDG_DATA_DIRS=/ihome/lchong/lel178/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_RUNTIME_DIR=/run/user/158782
+XDG_SESSION_ID=102063
+ZLIB_HOME=/ihome/crc/install/zlib/1.2.11/gcc/8.2.0
+ZSH=/bin/zsh
+CUDA_VISIBLE_DEVICES = 
+Shutting down.  Hopefully this was on purpose?
+Shutting down.  Hopefully this was on purpose?
