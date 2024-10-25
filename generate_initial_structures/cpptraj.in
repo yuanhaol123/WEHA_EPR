@@ -1,0 +1,16 @@
+parm free.prmtop
+trajin prod1.nc
+trajin prod2.nc
+trajin prod3.nc
+trajin prod4.nc
+trajin prod5.nc
+trajin prod6.nc
+trajin prod7.nc
+trajin prod8.nc
+trajin prod9.nc
+trajin prod10.nc
+strip :WAT
+distance @7275 @7317 noimage out pcoord.dat
+energy  :1-444 out energy.dat 
+go
+quit
